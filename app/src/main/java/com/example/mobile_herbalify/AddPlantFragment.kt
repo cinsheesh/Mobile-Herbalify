@@ -23,13 +23,11 @@ class AddPlantFragment : Fragment() {
 
     private val db = FirebaseFirestore.getInstance()
 
-    // 🔑 API KEY IMGBB KAMU
     private val IMGBB_API_KEY = "7677933a7e74e7b228473587fb01ee87"
 
     private lateinit var ivAddPlantImage: ImageView
     private var imageUri: Uri? = null
 
-    // Media Picker untuk memilih gambar dari galeri
     private val getImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         if (uri != null) {
             imageUri = uri
@@ -61,17 +59,14 @@ class AddPlantFragment : Fragment() {
         val etProcessing = view.findViewById<EditText>(R.id.etAddProcessing)
         val etWarning = view.findViewById<EditText>(R.id.etAddWarning)
 
-        // Buka galeri saat tombol ditekan
         btnPickImage.setOnClickListener {
             getImage.launch("image/*")
         }
 
-        // Kembali ke halaman Admin
         btnBack.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
 
-        // Proses Simpan Tanaman Baru
         btnSave.setOnClickListener {
             val name = etName.text.toString().trim()
             val latin = etLatin.text.toString().trim()

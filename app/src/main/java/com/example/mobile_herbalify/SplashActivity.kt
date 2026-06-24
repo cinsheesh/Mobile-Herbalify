@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.herbalify.R
-import com.example.herbalify.model.User
-import com.example.herbalify.network.ApiService
-import com.example.herbalify.network.RetrofitClient
+import com.example.mobile_herbalify.R
+import com.example.mobile_herbalify.model.User
+import com.example.mobile_herbalify.network.ApiService
+import com.example.mobile_herbalify.network.RetrofitClient
 
 class SplashActivity : AppCompatActivity() {
 

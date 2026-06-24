@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.herbalify.R
-import com.example.herbalify.model.Article
+import com.example.mobile_herbalify.R
+import com.example.mobile_herbalify.model.Article
 
 class ArticleAdapter(
     private val articleList: List<Article>,

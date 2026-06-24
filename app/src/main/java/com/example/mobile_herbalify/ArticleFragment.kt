@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.herbalify.adapter.ArticleAdapter
-import com.example.herbalify.model.Article
+import com.example.mobile_herbalify.adapter.ArticleAdapter
+import com.example.mobile_herbalify.model.Article
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ArticleFragment : Fragment() {
@@ -46,12 +46,10 @@ class ArticleFragment : Fragment() {
                     listArticleFromFirebase.add(article)
                 }
 
-                // Pasang Logika Klik Pindah Halaman Detail
                 rvAllArticles.adapter = ArticleAdapter(listArticleFromFirebase) { clickedArticle ->
                     val detailArticleFragment = DetailArticleFragment()
                     val bundle = Bundle()
 
-                    // 🚀 SEKARANG ID SUDAH IKUT DIKIRIM DI SINI
                     bundle.putString("ARG_ID", clickedArticle.id)
 
                     bundle.putString("ARG_TITLE", clickedArticle.title)

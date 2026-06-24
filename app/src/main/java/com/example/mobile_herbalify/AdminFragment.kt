@@ -27,7 +27,6 @@ class AdminFragment : Fragment() {
     private lateinit var rvAdminArticles: RecyclerView
     private lateinit var tvTotalArticlesAdmin: TextView
 
-    // 🚀 INISIALISASI UNTUK KARTU STATISTIK ATAS
     private lateinit var tvStatTotalPlants: TextView
     private lateinit var tvStatTotalArticles: TextView
 
@@ -43,21 +42,17 @@ class AdminFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Hubungkan UI Statistik
         tvStatTotalPlants = view.findViewById(R.id.tvStatTotalPlants)
         tvStatTotalArticles = view.findViewById(R.id.tvStatTotalArticles)
 
-        // Inisialisasi UI Tanaman
         rvAdminPlants = view.findViewById(R.id.rvAdminPlants)
         tvTotalPlantsAdmin = view.findViewById(R.id.tvTotalPlantsAdmin)
         rvAdminPlants.layoutManager = LinearLayoutManager(requireContext())
 
-        // Inisialisasi UI Artikel
         rvAdminArticles = view.findViewById(R.id.rvAdminArticles)
         tvTotalArticlesAdmin = view.findViewById(R.id.tvTotalArticlesAdmin)
         rvAdminArticles.layoutManager = LinearLayoutManager(requireContext())
 
-        // Logika Logout Admin
         val btnAdminLogout = view.findViewById<Button>(R.id.btnAdminLogout)
         btnAdminLogout.setOnClickListener {
             val sharedPref = requireActivity().getSharedPreferences("HerbalifyPrefs", Context.MODE_PRIVATE)
@@ -69,7 +64,6 @@ class AdminFragment : Fragment() {
             requireActivity().finish()
         }
 
-        // Tombol Tambah Tanaman
         val btnAddPlant = view.findViewById<Button>(R.id.btnAddPlant)
         btnAddPlant.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
@@ -78,7 +72,6 @@ class AdminFragment : Fragment() {
                 .commit()
         }
 
-        // Tombol Tambah Artikel
         val btnAddArticle = view.findViewById<Button>(R.id.btnAddArticle)
         btnAddArticle.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
@@ -104,7 +97,6 @@ class AdminFragment : Fragment() {
                     listPlant.add(plant)
                 }
 
-                // 🚀 UPDATE ANGKA DI CARD STATISTIK ATAS DAN TEKS DI BAWAHNYA
                 tvStatTotalPlants.text = "🌿 ${listPlant.size}"
                 tvTotalPlantsAdmin.text = "${listPlant.size} tanaman terdaftar"
 
@@ -158,7 +150,6 @@ class AdminFragment : Fragment() {
                     listArticle.add(article)
                 }
 
-                // 🚀 UPDATE ANGKA DI CARD STATISTIK ATAS DAN TEKS DI BAWAHNYA
                 tvStatTotalArticles.text = "📰 ${listArticle.size}"
                 tvTotalArticlesAdmin.text = "${listArticle.size} artikel terdaftar"
 

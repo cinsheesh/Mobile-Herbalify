@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFB">
+
+    <!-- Header Halaman -->
+    <TextView
+        android:id="@+id/tvTitleFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="Favorit Saya ❤️"
+        android:textColor="#1A2A22"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Teks Muncul Saat Belum Ada Favorit -->
+    <TextView
+        android:id="@+id/tvNoFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Kamu belum menambahkan favorit."
+        android:textColor="#858585"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- Tempat Munculnya Daftar Tanaman & Artikel -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTitleFavorite"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="24dp"
+        android:clipToPadding="false" />
+
+</RelativeLayout>

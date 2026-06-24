@@ -1,6 +1,6 @@
 package com.example.mobile_herbalify
 
-import android.content.Context // 1. TAMBAHKAN IMPORT CONTEXT INI
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
