@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "324790360388",
+    "project_id": "herbalify-app",
+    "storage_bucket": "herbalify-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324790360388:android:f099716c265c52dc6fdf11",
+        "android_client_info": {
+          "package_name": "com.example.herbalify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc9wJZ9VIj0J4dXtoZl3H0hnQxi5506GE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324790360388:android:b5ce38eba9f2ea366fdf11",
+        "android_client_info": {
+          "package_name": "com.example.mobile_herbalify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc9wJZ9VIj0J4dXtoZl3H0hnQxi5506GE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
