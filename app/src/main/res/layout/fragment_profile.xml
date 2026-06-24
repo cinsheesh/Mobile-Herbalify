@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ========================================== -->
+        <!-- HEADER GREEN AREA                          -->
+        <!-- ========================================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#388E3C"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <!-- Foto Profil -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                app:cardCornerRadius="55dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/ivProfilImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profil_default" /> <!-- 🚀 Memanggil gambar ilustrasi barumu -->
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvNamaProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Cindy Natasya"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEmailProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="cindy@gmail.com"
+                android:textColor="#C8E6C9"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- ========================================== -->
+        <!-- AREA MENU PUTIH                            -->
+        <!-- ========================================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/bg_white_rounded_top"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENGATURAN AKUN"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#858585"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ========================================== -->
+            <!-- CARD 1: EDIT PROFIL                        -->
+            <!-- ========================================== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/btnMenuEditProfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:gravity="center_vertical"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:background="#E8F5E9"
+                        android:padding="10dp"/>
+
+                    <!-- 🚀 Teks kecil dihapus, jadi langsung Judul saja -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:text="Edit Profil"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@android:drawable/ic_media_next"
+                        app:tint="#BDBDBD"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ========================================== -->
+            <!-- CARD 2: GANTI PASSWORD                     -->
+            <!-- ========================================== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:id="@+id/btnMenuGantiPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:gravity="center_vertical"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_lock_lock"
+                        android:background="#FFF3E0"
+                        android:padding="10dp"/>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:text="Ganti Password"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@android:drawable/ic_media_next"
+                        app:tint="#BDBDBD"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ========================================== -->
+            <!-- PENDORONG TOMBOL LOGOUT KE BAWAH           -->
+            <!-- ========================================== -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="40dp" />
+
+            <!-- ========================================== -->
+            <!-- TOMBOL LOGOUT                              -->
+            <!-- ========================================== -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="🚪 Keluar dari Akun"
+                android:textColor="#E53935"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFEBEE"
+                app:strokeColor="#FFCDD2"
+                app:strokeWidth="1dp"
+                app:cornerRadius="30dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- ========================================== -->
+            <!-- FOOTER TEXT COPYRIGHT                      -->
+            <!-- ========================================== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Herbalify v1.0.0 · © 2026 Herbalify Team"
+                android:textColor="#B0B0B0"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
