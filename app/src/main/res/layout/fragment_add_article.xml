@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Tombol Back & Judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBackFromAddArticle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah Artikel Baru"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:textColor="#333333"/>
+        </LinearLayout>
+
+        <!-- Preview Gambar -->
+        <ImageView
+            android:id="@+id/ivAddArticleImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnPickArticleImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Foto Artikel"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Input Judul -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul Artikel"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etAddArticleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Contoh: Manfaat Kunyit Asam"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Input Isi Artikel -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isi Artikel / Konten"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etAddArticleContent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:background="@android:drawable/edit_text"
+            android:hint="Tulis isi artikel di sini..."
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Tombol Simpan -->
+        <Button
+            android:id="@+id/btnSaveArticle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="💾 Simpan &amp; Upload Artikel"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2E7D32"/>
+
+    </LinearLayout>
+</ScrollView>

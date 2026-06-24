@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Tombol Back & Judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBackFromEditArticle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Artikel"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:textColor="#333333"/>
+        </LinearLayout>
+
+        <!-- Preview Gambar Lama / Baru -->
+        <ImageView
+            android:id="@+id/ivEditArticleImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnPickEditArticleImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ganti Foto Artikel"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Input Judul -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul Artikel"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etEditArticleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/edit_text"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Input Isi Artikel -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isi Artikel / Konten"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etEditArticleContent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Tombol Update -->
+        <Button
+            android:id="@+id/btnUpdateArticle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="🆙 Update Artikel"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2E7D32"/>
+
+    </LinearLayout>
+</ScrollView>
